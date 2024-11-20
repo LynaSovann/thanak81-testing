@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: thanak81-testing-certificate
+  namespace: thanak81-testing
+spec:
+  secretName: thanak81-testing-secret-tls
+  commonName: thanak81-testing.assessify.org
+  dnsNames:
+  - thanak81-testing.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
